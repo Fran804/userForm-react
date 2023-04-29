@@ -11,14 +11,14 @@ const UserCard: React.FC<UserCardProps> = ({ navigation, user }) => (
       <View style={styles.userInfoContainer}>
         <UserProfilePic />
         <View style={styles.nameContainer}>
-          <Text variant="titleLarge" style={{ fontWeight: 'bold' }}>
+          <Text variant="titleLarge" style={{ fontWeight: 'bold', textAlign: 'center', marginTop: '2%' }}>
             {user.name}
           </Text>
-          <Text>{user.username}</Text>
         </View>
         <View style={styles.row}>
-          <UserCardInfo title="Phone Number" content={user.phone} />
+          <UserCardInfo title="Username" content={user.username} />
           <UserCardInfo title="Email" content={user.email} />
+          <UserCardInfo title="Phone Number" content={user.phone} />
           <UserCardInfo title="City" content={user.address.city} />
         </View>
       </View>
@@ -30,18 +30,9 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: 250,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    shadowColor: '#000000',
-    shadowOffset: {
-      width: 0,
-      height: 5
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 5.62,
-    elevation: 7,
-    marginBottom: 60
+    height: 200,
+    backgroundColor: '#cdcec8',
+    marginBottom: '25%'
   },
   logoContainer: {
     paddingHorizontal: 30,
@@ -71,7 +62,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     columnGap: 20,
     rowGap: 10,
-    flexBasis: '33%'
+    flexBasis: '33%',
+    justifyContent: 'space-between'
   }
 });
 

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 const UserProfilePic = () => (
   <Avatar.Image
-    size={80}
+    size={85}
     style={styles.pic}
-    source={require('../../assets/user.png')}
+    source={require('../../assets/employee.png')}
   />
 );
 
@@ -15,7 +15,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 1,
     top: -50,
-    left: 20
+    display: 'flex',
+    alignSelf: 'center',
+    backgroundColor: 'black'
   }
 });
 
